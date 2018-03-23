@@ -1,7 +1,5 @@
-import os
-os.system('cls' if os.name == 'nt' else 'clear')
 #http://adventofcode.com/2015/day/6
-'''
+
 #1
 with open("lights.input", "r") as allom:
     sorok=(sor.replace(',',' ').strip().split(' ') for sor in allom.readlines())
@@ -27,7 +25,7 @@ with open("lights.input", "r") as allom:
 
                 
     print(len(on))
-'''
+
 #2
 
 with open("lights.input", "r") as allom:

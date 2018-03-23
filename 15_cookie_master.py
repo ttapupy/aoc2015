@@ -11,7 +11,7 @@ prop=[list(i) for i in zip(*ingr)] #capacity, durability, flavor, texture, calor
 cal=prop[4]
 import itertools as it
 #1
-'''
+
 spoons= it.product([a for a in range(1,98)], repeat=4)
 max_score=0
 for spoon in spoons:
@@ -26,7 +26,7 @@ for spoon in spoons:
             prop_score*=prop_value
         max_score=max(max_score, prop_score)
 print(max_score) # 222870
-'''
+
 #2
 spoons= it.product([a for a in range(1,98)], repeat=4)
 max_score=0
