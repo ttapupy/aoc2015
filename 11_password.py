@@ -1,10 +1,13 @@
 # növeljünk egy karaktersort úgy, mintha szám lenne, aztán...
 # http://adventofcode.com/2015/day/11
+#2: Santa's password expired again. What's the next one?
+
 
 import re
-password = 'cqjxjnds'
 
-#1
+#1. password = 'cqjxjnds'
+password = 'cqjxxyzz'   #2.
+orig=password
 
 no_char = re.compile(r"^((?![iol]).)*$")
 two_pairs = re.compile(r".*([\w])\1.*([\w])\2.*")
@@ -17,7 +20,7 @@ def conse(lista):
 pwl=[]
 while pwl != len(password) * ['z']:
     pwl = list(password)[::-1]
-    if conse(pwl) and re.search(no_char, password) and re.search(two_pairs, password):
+    if conse(pwl) and re.search(no_char, password) and re.search(two_pairs, password) and password != orig:
         break
     else:
         for i in range(len(pwl)):
@@ -29,7 +32,3 @@ while pwl != len(password) * ['z']:
                 password = ''.join(pwl[::-1])
                 break
 print(password)
-
-
-
-#2
